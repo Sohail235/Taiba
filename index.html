@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAIBA - My Love</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 3em;
+            margin-top: 5vh;
+            text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.6);
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #d63384;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+        .falling-flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://i.imgur.com/8n6i0eS.png');
+            background-size: cover;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .navigation button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background: #d63384;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">TAIBA - My Love</div>
+    <h1>TAIBA, You Are My Everything ❤️</h1>
+    
+    <div class="navigation">
+        <button onclick="prevPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+    
+    <div id="pageContent" class="container"></div>
+    
+    <script>
+        const loveTexts = [
+            "You are the light in my life, the reason my heart beats.",
+            "Every moment with you is a moment I cherish forever.",
+            "My love for you is endless, just like the sky.",
+            "Your smile brightens my darkest days.",
+            "You are my dream, my reality, my everything.",
+            "Life is beautiful because you are in it.",
+            "You are my happiness, my love, my soulmate.",
+            "Every heartbeat of mine whispers your name.",
+            "You are the poetry of my life, written in love.",
+            "My love for you grows stronger every day.",
+            "Your love is the most precious gift I have.",
+            "With you, every day is a beautiful love story.",
+            "I am forever grateful for your love.",
+            "You complete me in every way possible.",
+            "Loving you is the best decision of my life.",
+            "You are the melody of my heart, the rhythm of my soul.",
+            "Your love is my greatest strength.",
+            "You are my fairy tale come true.",
+            "I fall in love with you every single day.",
+            "Your love is the sunshine that brightens my world.",
+            "Every day with you is a blessing.",
+            "You are my safe place, my forever home.",
+            "I am nothing without your love.",
+            "You are the most beautiful thing in my life.",
+            "No words can truly express my love for you.",
+            "I want to spend forever loving you.",
+            "Your love is the magic that makes my world shine.",
+            "You are my forever and always.",
+            "Every second with you is a treasure.",
+            "Your love is the song my heart sings.",
+            "I am blessed to have you in my life.",
+            "You are my destiny, my love, my heart.",
+            "Loving you is my greatest joy.",
+            "With you, life is a beautiful adventure.",
+            "Your love is my peace, my comfort, my home.",
+            "I would choose you again and again.",
+            "You are the reason I believe in love.",
+            "I love you more than words can ever say.",
+            "My love for you is eternal, endless, and true."
+        ];
+        
+        let currentPage = 0;
+        
+        function showPage(index) {
+            if (index >= 0 && index < loveTexts.length) {
+                document.getElementById("pageContent").innerHTML = `<h2>Page ${index + 1}</h2><p>${loveTexts[index]}</p>`;
+                currentPage = index;
+            }
+        }
+        
+        function prevPage() {
+            if (currentPage > 0) {
+                showPage(currentPage - 1);
+            }
+        }
+        
+        function nextPage() {
+            if (currentPage < loveTexts.length - 1) {
+                showPage(currentPage + 1);
+            }
+        }
+        
+        showPage(0);
+        
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.classList.add("falling-flower");
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            flower.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(flower);
+            setTimeout(() => flower.remove(), 5000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+</body>
+</html>
