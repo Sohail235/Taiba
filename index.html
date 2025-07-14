@@ -1,93 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SK THE DEVIL - Hacker Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Courier New', monospace;
-      background-color: #0a0a0a;
-      color: #e5e5e5;
+      margin: 0; font-family: 'Courier New', monospace;
+      background: #0a0a0a; color: #e5e5e5;
     }
-    .highlight {
-      color: #ff3c3c;
-    }
-    .section {
-      max-width: 700px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    .card {
-      background: #111111;
-      border: 1px solid #2a2a2a;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-    }
-    .pfp {
-      width: 160px;
-      height: 160px;
-      border-radius: 100%;
-      object-fit: cover;
-      border: 3px solid #ff0000;
-      box-shadow: 0 0 10px #ff0000;
-    }
-    a {
-      color: #ff3c3c;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #666;
-      padding: 2rem 0 1rem;
-    }
+    .pfp { width: 160px; height: 160px; border-radius:50%; object-fit:cover;
+           border:3px solid #ff0000; box-shadow:0 0 10px #ff0000; }
+    .highlight { color:#ff3c3c; }
+    .card { background:#111; border:1px solid #2a2a2a; border-radius:1rem;
+            padding:2rem; margin:2rem auto; max-width:768px; }
+    a { color:#ff3c3c; }
+    footer { text-align:center; font-size:.8rem; color:#666; }
+    .cover { position:relative; width:100%; height:0; padding-bottom:56.25%; overflow:hidden; }
+    .cover iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+    .overlay { position:absolute; top:0; left:0; width:100%; height:100%;
+               display:flex; flex-direction:column; align-items:center;
+               justify-content:center; text-align:center; color:#fff; }
   </style>
 </head>
 <body>
 
-  <div class="section text-center">
-    <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="Profile Image" class="pfp mx-auto mb-6" />
-    <h1 class="text-4xl font-bold highlight">SK THE DEVIL</h1>
-    <p class="text-gray-400 mt-2">Cybersecurity Researcher | Red Team Specialist | DarkNet Navigator</p>
-  </div>
-
-  <div class="section">
-    <div class="card space-y-4">
-      <h2 class="text-2xl font-semibold highlight">About Me</h2>
-      <p>
-        I operate silently across digital borders. My focus lies in social engineering, payload development,
-        and real-time exploitation. Every line of code I write is forged with intent — to break limits.
-      </p>
+  <!-- Cover Video Embed -->
+  <div class="cover">
+    <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&loop=1&muted=1&nocontrols=1"
+            frameborder="0" allowfullscreen></iframe>
+    <div class="overlay">
+      <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="Profile" class="pfp mb-4" />
+      <h1 class="text-4xl font-bold highlight">SK THE DEVIL</h1>
+      <p class="text-gray-400 mt-1">Cybersecurity Researcher | Red Team Specialist | DarkNet Navigator</p>
     </div>
   </div>
 
-  <div class="section">
-    <div class="card space-y-4">
-      <h2 class="text-2xl font-semibold highlight">Tools & Skills</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Metasploit Framework</li>
-        <li>Burp Suite Professional</li>
-        <li>Hydra, Nmap, SQLMap</li>
-        <li>Kali Nethunter, Termux Ops</li>
-        <li>Reverse Shells & Payload Crafting</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h2 class="text-2xl font-semibold highlight mb-2">About Me</h2>
+    <p>Operating silently across digital borders, I specialize in offensive security, social engineering, and network infiltration.</p>
   </div>
 
-  <div class="section">
-    <div class="card space-y-4">
-      <h2 class="text-2xl font-semibold highlight">Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:business@devilofc.com">business@devilofc.com</a></p>
-      <p><strong>Phone:</strong> +1 920 666 0000</p>
-      <p><strong>Location:</strong> Sector 666, Inferno Shellnet</p>
-    </div>
+  <div class="card">
+    <h2 class="text-2xl font-semibold highlight mb-2">Tools & Skills</h2>
+    <ul class="list-disc list-inside space-y-1">
+      <li>Metasploit Framework</li>
+      <li>Burp Suite Pro</li>
+      <li>Nmap, Hydra, SQLMap</li>
+      <li>Kali Nethunter & Termux Ops</li>
+      <li>Payload Crafting & Reverse Shells</li>
+    </ul>
   </div>
 
-  <footer>
-    &copy; 2025 SK THE DEVIL. All rights reserved.
-  </footer>
+  <div class="card">
+    <h2 class="text-2xl font-semibold highlight mb-2">Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:business@devilofc.com">business@devilofc.com</a></p>
+    <p><strong>Phone:</strong> +1 920 666 0000</p>
+    <p><strong>Location:</strong> Level ‑1337, Inferno Shellnet, Sector 666</p>
+  </div>
+
+  <footer>&copy; 2025 SK THE DEVIL — DarkNet Certified. All rights reserved.</footer>
 
 </body>
 </html>
