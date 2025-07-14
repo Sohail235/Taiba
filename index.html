@@ -18,30 +18,33 @@
       background: #000;
       overflow-x: hidden;
     }
-    .streamable-bg {
+    video.bg-video {
       position: fixed;
       top: 0; left: 0;
       width: 100vw;
       height: 100vh;
+      object-fit: cover;
       z-index: -1;
+      filter: brightness(0.3) contrast(1.2);
     }
-    .streamable-bg iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .profile-container {
+    .profile-box {
       width: 90%;
       max-width: 1000px;
-      margin: 5vh auto;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       border: 1px solid rgba(255, 0, 0, 0.4);
       border-radius: 10px;
       box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-      padding: 3rem;
+      padding: 2rem;
       backdrop-filter: blur(10px);
-      position: relative;
-      z-index: 1;
+      margin-bottom: 2rem;
     }
     .pfp {
       width: 140px;
@@ -67,9 +70,6 @@
     p {
       line-height: 1.8;
       font-size: 1rem;
-    }
-    .section {
-      margin-top: 2rem;
     }
     .glow-button {
       display: inline-block;
@@ -98,37 +98,40 @@
   </style>
 </head>
 <body>
-  <div class="streamable-bg">
-    <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&loop=1&nocontrols=0" allowfullscreen allow="autoplay"></iframe>
-  </div>  <div class="profile-container">
-    <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="SK THE DEVIL" class="pfp">
-    <h1>SK THE DEVIL</h1>
-    <p style="text-align:center; color:#ccc;">Red Team Operator • Cybersecurity Researcher • Dark Web Specialist</p><div class="section">
+  <video class="bg-video" autoplay loop muted>
+    <source src="https://cdn.pixabay.com/video/2023/11/22/191243-887642759_large.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>  <div class="wrapper">
+    <div class="profile-box">
+      <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="SK THE DEVIL" class="pfp">
+      <h1>SK THE DEVIL</h1>
+      <p style="text-align:center; color:#ccc;">Red Team Operator • Cybersecurity Researcher • Dark Web Specialist</p>
+    </div><div class="profile-box">
   <h2>INTRODUCTION</h2>
   <p>I am SK THE DEVIL — a name whispered across the digital underworld. I'm not your average coder. I'm a red team tactician, a digital illusionist, and a warlock of the wire. While most are focused on building, I'm busy breaking — not for destruction, but for discipline, discovery, and defense. I believe the only way to understand a system is to take it apart, wire by wire, packet by packet. My manifesto isn't just about hacking computers — it's about hacking perception, rewriting narratives, and exploiting ignorance. I'm the anomaly in the system, the ghost in the shell, and the reason your logs look suspicious.</p>
 </div>
 
-<div class="section">
+<div class="profile-box">
   <h2>TOOLS OF THE DEVIL</h2>
   <p>Every hacker has their toolbox — mine is a digital armory. I wield Metasploit like a blade, Burp Suite like a crowbar, and Nmap as my radar. SQLMap, Hydra, and custom payloads run in my veins. From zero-day finders to RATs that dance in RAM, my stack evolves with the threat landscape. I develop my own obfuscation techniques and reverse shells, ensuring no endpoint is ever truly secure. I don’t just use Kali — I customize it. Every exploit is crafted, not copied. This is my language.</p>
 </div>
 
-<div class="section">
+<div class="profile-box">
   <h2>RED TEAM OPERATIONS</h2>
   <p>My red team missions are more than just penetration tests. They're full simulations of adversarial behavior — phishing campaigns, lateral movement, privilege escalation, and data exfiltration. From recon to persistence, I operate silently in enterprise systems. I emulate APTs, craft my own droppers, and leave no indicator unless I want it found. Every attack has purpose, timing, and silence. After the breach, I educate, not brag.</p>
 </div>
 
-<div class="section">
+<div class="profile-box">
   <h2>THE DARKNET & OSINT WARFARE</h2>
   <p>I don't just access the darknet — I map it. My OSINT operations gather intel from forums, marketplaces, breached databases, and onion services. With custom scrapers and graph-based link analysis, I profile threat actors before they even notice. Using identities I created years ago, I infiltrate digital circles with trust tokens, PGP keys, and shared secrets. Data is power, and I never stop collecting.</p>
 </div>
 
-<div class="section">
+<div class="profile-box">
   <h2>FUTURE OF HACKING</h2>
   <p>The battlefield is evolving. From AI-crafted exploits to quantum-resistant malware, we are entering the next age of warfare. The hacker of tomorrow will not just type fast — they will think sideways, deploy autonomous logic bombs, and socially manipulate even the most secure environments. I’m building tools that learn, defend, and attack without a UI. The singularity will be rootkitted.</p>
 </div>
 
-<div class="section">
+<div class="profile-box">
   <h2>CONTACT</h2>
   <p><strong>Email:</strong> business@devilofc.com<br>
      <strong>Phone:</strong> +1 920 666 0000<br>
@@ -138,7 +141,7 @@
 </div>
 
   </div>  <footer>
-    &copy; 2025 SK THE DEVIL. Coded in the dark. All rights preserved.
+    &copy; 2025 SK THE DEVIL. Coded in the dark. All rights reserved.
   </footer>
 </body>
 </html>
