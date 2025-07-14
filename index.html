@@ -1,65 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SK THE DEVIL - Hacker Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SK THE DEVIL - Hacker Manifesto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0; font-family: 'Courier New', monospace;
-      background: #0a0a0a; color: #e5e5e5;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .pfp { width: 160px; height: 160px; border-radius:50%; object-fit:cover;
-           border:3px solid #ff0000; box-shadow:0 0 10px #ff0000; }
-    .highlight { color:#ff3c3c; }
-    .card { background:#111; border:1px solid #2a2a2a; border-radius:1rem;
-            padding:2rem; margin:2rem auto; max-width:768px; }
-    a { color:#ff3c3c; }
-    footer { text-align:center; font-size:.8rem; color:#666; }
-    .cover { position:relative; width:100%; height:0; padding-bottom:56.25%; overflow:hidden; }
-    .cover iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
-    .overlay { position:absolute; top:0; left:0; width:100%; height:100%;
-               display:flex; flex-direction:column; align-items:center;
-               justify-content:center; text-align:center; color:#fff; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      color: #eee;
+      background: #000;
+      overflow-x: hidden;
+    }
+    .streamable-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+    .streamable-bg iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .profile-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 5vh auto;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 0, 0, 0.4);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+      padding: 3rem;
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 1;
+    }
+    .pfp {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid red;
+      box-shadow: 0 0 20px red;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #ff0000;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      color: #ff4444;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    .glow-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #ff0000;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000 inset;
+      background: transparent;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    .glow-button:hover {
+      background: #ff0000;
+      color: #000;
+      box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000 inset;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 2rem 0;
+    }
   </style>
 </head>
 <body>
+  <div class="streamable-bg">
+    <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&loop=1&nocontrols=0" allowfullscreen allow="autoplay"></iframe>
+  </div>  <div class="profile-container">
+    <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="SK THE DEVIL" class="pfp">
+    <h1>SK THE DEVIL</h1>
+    <p style="text-align:center; color:#ccc;">Red Team Operator • Cybersecurity Researcher • Dark Web Specialist</p><div class="section">
+  <h2>INTRODUCTION</h2>
+  <p>I am SK THE DEVIL — a name whispered across the digital underworld. I'm not your average coder. I'm a red team tactician, a digital illusionist, and a warlock of the wire. While most are focused on building, I'm busy breaking — not for destruction, but for discipline, discovery, and defense. I believe the only way to understand a system is to take it apart, wire by wire, packet by packet. My manifesto isn't just about hacking computers — it's about hacking perception, rewriting narratives, and exploiting ignorance. I'm the anomaly in the system, the ghost in the shell, and the reason your logs look suspicious.</p>
+</div>
 
-  <!-- Cover Video Embed -->
-  <div class="cover">
-    <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&loop=1&muted=1&nocontrols=1"
-            frameborder="0" allowfullscreen></iframe>
-    <div class="overlay">
-      <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="Profile" class="pfp mb-4" />
-      <h1 class="text-4xl font-bold highlight">SK THE DEVIL</h1>
-      <p class="text-gray-400 mt-1">Cybersecurity Researcher | Red Team Specialist | DarkNet Navigator</p>
-    </div>
-  </div>
+<div class="section">
+  <h2>TOOLS OF THE DEVIL</h2>
+  <p>Every hacker has their toolbox — mine is a digital armory. I wield Metasploit like a blade, Burp Suite like a crowbar, and Nmap as my radar. SQLMap, Hydra, and custom payloads run in my veins. From zero-day finders to RATs that dance in RAM, my stack evolves with the threat landscape. I develop my own obfuscation techniques and reverse shells, ensuring no endpoint is ever truly secure. I don’t just use Kali — I customize it. Every exploit is crafted, not copied. This is my language.</p>
+</div>
 
-  <div class="card">
-    <h2 class="text-2xl font-semibold highlight mb-2">About Me</h2>
-    <p>Operating silently across digital borders, I specialize in offensive security, social engineering, and network infiltration.</p>
-  </div>
+<div class="section">
+  <h2>RED TEAM OPERATIONS</h2>
+  <p>My red team missions are more than just penetration tests. They're full simulations of adversarial behavior — phishing campaigns, lateral movement, privilege escalation, and data exfiltration. From recon to persistence, I operate silently in enterprise systems. I emulate APTs, craft my own droppers, and leave no indicator unless I want it found. Every attack has purpose, timing, and silence. After the breach, I educate, not brag.</p>
+</div>
 
-  <div class="card">
-    <h2 class="text-2xl font-semibold highlight mb-2">Tools & Skills</h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>Metasploit Framework</li>
-      <li>Burp Suite Pro</li>
-      <li>Nmap, Hydra, SQLMap</li>
-      <li>Kali Nethunter & Termux Ops</li>
-      <li>Payload Crafting & Reverse Shells</li>
-    </ul>
-  </div>
+<div class="section">
+  <h2>THE DARKNET & OSINT WARFARE</h2>
+  <p>I don't just access the darknet — I map it. My OSINT operations gather intel from forums, marketplaces, breached databases, and onion services. With custom scrapers and graph-based link analysis, I profile threat actors before they even notice. Using identities I created years ago, I infiltrate digital circles with trust tokens, PGP keys, and shared secrets. Data is power, and I never stop collecting.</p>
+</div>
 
-  <div class="card">
-    <h2 class="text-2xl font-semibold highlight mb-2">Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:business@devilofc.com">business@devilofc.com</a></p>
-    <p><strong>Phone:</strong> +1 920 666 0000</p>
-    <p><strong>Location:</strong> Level ‑1337, Inferno Shellnet, Sector 666</p>
-  </div>
+<div class="section">
+  <h2>FUTURE OF HACKING</h2>
+  <p>The battlefield is evolving. From AI-crafted exploits to quantum-resistant malware, we are entering the next age of warfare. The hacker of tomorrow will not just type fast — they will think sideways, deploy autonomous logic bombs, and socially manipulate even the most secure environments. I’m building tools that learn, defend, and attack without a UI. The singularity will be rootkitted.</p>
+</div>
 
-  <footer>&copy; 2025 SK THE DEVIL — DarkNet Certified. All rights reserved.</footer>
+<div class="section">
+  <h2>CONTACT</h2>
+  <p><strong>Email:</strong> business@devilofc.com<br>
+     <strong>Phone:</strong> +1 920 666 0000<br>
+     <strong>Base:</strong> Level -1337, Inferno Shellnet<br>
+     <strong>GitHub:</strong> github.com/skthedevil</p>
+  <a href="mailto:business@devilofc.com" class="glow-button">Contact Me</a>
+</div>
 
+  </div>  <footer>
+    &copy; 2025 SK THE DEVIL. Coded in the dark. All rights preserved.
+  </footer>
 </body>
 </html>
