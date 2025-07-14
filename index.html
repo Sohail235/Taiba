@@ -1,126 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SK THE DEVIL - Hacker Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Courier New', monospace;
+      background-color: #0a0a0a;
+      color: #e5e5e5;
     }
-    .neon {
-      border: 4px solid #ff0000;
-      box-shadow: 0 0 12px #ff0000, 0 0 20px #ff0000;
+    .highlight {
+      color: #ff3c3c;
     }
-    .icon:hover {
-      transform: scale(1.1);
-      transition: 0.2s ease;
+    .section {
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    .glitch {
-      color: #ff0000;
-      animation: glitch 1s infinite;
+    .card {
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     }
-    @keyframes glitch {
-      0% { text-shadow: 2px 2px #ff0000; }
-      25% { text-shadow: -2px -1px #00ff00; }
-      50% { text-shadow: 3px -1px #ff00ff; }
-      75% { text-shadow: -1px 2px #ffff00; }
-      100% { text-shadow: 2px -2px #00ffff; }
+    .pfp {
+      width: 160px;
+      height: 160px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 3px solid #ff0000;
+      box-shadow: 0 0 10px #ff0000;
+    }
+    a {
+      color: #ff3c3c;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      padding: 2rem 0 1rem;
     }
   </style>
 </head>
-<body class="bg-black text-white min-h-screen flex flex-col items-center px-6 py-10 space-y-10">
+<body>
 
-  <!-- Profile Section -->
-  <div class="text-center w-full max-w-xl space-y-6">
-    <img id="profile-pic" src="https://i.imgur.com/WxubHxQ.jpeg"
-         alt="Profile Image" class="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-full object-cover neon" />
-
-    <input type="text" id="image-url" placeholder="Paste image URL to change profile"
-           class="w-full p-3 text-sm text-black rounded shadow-lg" oninput="updateImage()" />
-
-    <h1 class="text-4xl md:text-5xl font-bold glitch">SK THE DEVIL</h1>
-    <p class="text-gray-400 text-xl">🩸 Self-Learned Hacker | DarkNet Explorer | Code Haunter 🩸</p>
+  <div class="section text-center">
+    <img src="https://i.imgur.com/WxubHxQ.jpeg" alt="Profile Image" class="pfp mx-auto mb-6" />
+    <h1 class="text-4xl font-bold highlight">SK THE DEVIL</h1>
+    <p class="text-gray-400 mt-2">Cybersecurity Researcher | Red Team Specialist | DarkNet Navigator</p>
   </div>
 
-  <!-- Info Section -->
-  <div class="w-full max-w-2xl text-center space-y-4 text-lg leading-relaxed">
-    <p><span class="text-red-500 font-semibold">Experience:</span> 3 Years in Social Engineering, Exploitation, and Digital Chaos</p>
-    <p><span class="text-red-500 font-semibold">DOB:</span> Devils are made, not born</p>
-    <p><span class="text-red-500 font-semibold">Location:</span> Level -1337, Inferno Shellnet, Sector 666</p>
-    <p><span class="text-red-500 font-semibold">Phone:</span> +1 920 666 0000</p>
-    <p><span class="text-red-500 font-semibold">Email:</span>
-      <a href="mailto:business@devilofc.com" class="text-red-400 hover:underline">business@devilofc.com</a></p>
-    <p><span class="text-red-500 font-semibold">Status:</span> Online [Tor Routed, VPN x3]</p>
-    <p><span class="text-red-500 font-semibold">IP:</span> 66.6.6.6 (Hidden Node)</p>
-    <p><span class="text-red-500 font-semibold">Tools:</span> Termux | Metasploit | Burp Suite | Nmap | Ghost Framework</p>
-    <p><span class="text-red-500 font-semibold">Current Mission:</span> Intercepting insecure signals & launching port flood</p>
+  <div class="section">
+    <div class="card space-y-4">
+      <h2 class="text-2xl font-semibold highlight">About Me</h2>
+      <p>
+        I operate silently across digital borders. My focus lies in social engineering, payload development,
+        and real-time exploitation. Every line of code I write is forged with intent — to break limits.
+      </p>
+    </div>
   </div>
 
-  <!-- Social Icons -->
-  <div class="flex justify-center space-x-8 text-4xl mt-4">
-    <a href="#" class="icon text-red-600" title="YouTube">📺</a>
-    <a href="#" class="icon text-pink-500" title="Instagram">📸</a>
-    <a href="#" class="icon text-white" title="TikTok">🎵</a>
-    <a href="#" class="icon text-green-500" title="WhatsApp">📞</a>
+  <div class="section">
+    <div class="card space-y-4">
+      <h2 class="text-2xl font-semibold highlight">Tools & Skills</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Metasploit Framework</li>
+        <li>Burp Suite Professional</li>
+        <li>Hydra, Nmap, SQLMap</li>
+        <li>Kali Nethunter, Termux Ops</li>
+        <li>Reverse Shells & Payload Crafting</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Terminal Box -->
-  <div class="w-full max-w-2xl bg-gray-900 border border-red-500 rounded p-4 mt-8 text-left text-sm md:text-base">
-    <p class="text-green-400 font-mono">> root@skthedevil:</p>
-    <p class="text-white pl-4">"If you hear silence... it's because I'm already in."</p>
-    <p class="text-red-500 pl-4 mt-2"># Respect the Code — Fear the Devil</p>
+  <div class="section">
+    <div class="card space-y-4">
+      <h2 class="text-2xl font-semibold highlight">Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:business@devilofc.com">business@devilofc.com</a></p>
+      <p><strong>Phone:</strong> +1 920 666 0000</p>
+      <p><strong>Location:</strong> Sector 666, Inferno Shellnet</p>
+    </div>
   </div>
 
-  <!-- Floating Fake Terminal -->
-  <div id="terminal" class="fixed bottom-4 right-4 bg-black border border-red-600 text-green-400 font-mono text-xs md:text-sm p-3 rounded w-72 h-48 overflow-hidden shadow-lg z-50">
-    <div id="terminal-output"></div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="mt-12 text-center text-sm text-gray-500">
-    ⚡ Powered by TerminalX | 💀 © 2025 SK THE DEVIL | ☠️ Breach Complete. Ghost Mode Activated.
+  <footer>
+    &copy; 2025 SK THE DEVIL. All rights reserved.
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Update Profile Picture
-    function updateImage() {
-      const imageUrl = document.getElementById('image-url').value;
-      document.getElementById('profile-pic').src = imageUrl;
-    }
-
-    // Fake Terminal Script
-    const terminalLines = [
-      "[+] Scanning device...",
-      "[+] Detected OS: Android 13",
-      "[+] Battery: 87% 🔋",
-      "[+] IP Address: 192.168.0.105",
-      "[+] Injecting backdoor payload...",
-      "[+] Accessing camera... 🔓",
-      "[+] Downloading WhatsApp DB...",
-      "[+] Dumping Contacts...",
-      "[+] Exfiltrating files to darknet...",
-      "[✓] Logs wiped. You were never here."
-    ];
-
-    let i = 0;
-    const output = document.getElementById('terminal-output');
-    function printNextLine() {
-      if (i < terminalLines.length) {
-        const line = document.createElement('div');
-        line.textContent = terminalLines[i++];
-        output.appendChild(line);
-        output.scrollTop = output.scrollHeight;
-        setTimeout(printNextLine, 1200);
-      } else {
-        i = 0;
-        output.innerHTML = '';
-        setTimeout(printNextLine, 2000);
-      }
-    }
-    printNextLine();
-  </script>
 </body>
-         </html>
+</html>
