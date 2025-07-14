@@ -16,8 +16,8 @@
         }
 
         body {
-            background-color: #000;
-            color: #0f0;
+            background-color: #ffffff;
+            color: #333;
             line-height: 1.6;
             padding: 20px;
         }
@@ -33,10 +33,11 @@
             width: 100%;
             height: 400px;
             overflow: hidden;
-            border-radius: 0;
+            border-radius: 5px;
             margin-bottom: 20px;
             position: relative;
-            border: 1px solid #ff0000;
+            border: 3px solid #007BFF;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
         }
 
         .video-container iframe {
@@ -57,11 +58,11 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #ff0000;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            border: 3px solid #007BFF;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
             margin-top: -75px;
             z-index: 10;
-            background-color: #000;
+            background-color: #fff;
             overflow: hidden;
         }
 
@@ -69,7 +70,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(100%) contrast(150%);
+            filter: contrast(120%);
         }
 
         .title {
@@ -78,31 +79,30 @@
             color: #ff0000;
             margin: 20px 0 5px;
             text-align: center;
-            text-shadow: 0 0 10px #ff0000;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #0f0;
+            color: #666;
             margin-bottom: 30px;
             text-align: center;
         }
 
         /* Content Cards */
         .card {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid #ff0000;
-            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #007BFF;
+            border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
         }
 
         .card h2 {
-            color: #ff0000;
+            color: #007BFF;
             margin-bottom: 15px;
             font-size: 1.5rem;
-            border-bottom: 1px solid #ff0000;
+            border-bottom: 1px solid #007BFF;
             padding-bottom: 10px;
         }
 
@@ -122,43 +122,44 @@
         }
 
         .card li:before {
-            content: ">";
-            color: #ff0000;
+            content: "■";
+            color: #007BFF;
             position: absolute;
             left: 0;
+            font-size: 0.8em;
         }
 
         /* Contact Button */
         .contact-btn {
             display: inline-block;
             background-color: transparent;
-            color: #ff0000;
-            border: 2px solid #ff0000;
+            color: #007BFF;
+            border: 2px solid #007BFF;
             padding: 10px 25px;
-            border-radius: 0;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
             text-transform: uppercase;
         }
 
         .contact-btn:hover {
-            background-color: #ff0000;
-            color: black;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            background-color: #007BFF;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
         }
 
         /* Terminal Effect */
         .typing {
-            border-right: 2px solid #0f0;
+            border-right: 2px solid #007BFF;
             animation: blink 1s step-end infinite;
         }
 
         @keyframes blink {
             from, to { border-color: transparent }
-            50% { border-color: #0f0 }
+            50% { border-color: #007BFF }
         }
 
         /* Responsive Design */
@@ -183,7 +184,7 @@
     <div class="container">
         <!-- Video Background -->
         <div class="video-container">
-            <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&muted=1&loop=1&controls=0" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://streamable.com/e/t5w0o6?autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
         
         <!-- Profile Section -->
@@ -197,21 +198,20 @@
         
         <!-- Introduction Card -->
         <div class="card">
-            <h2>// WARNING</h2>
-            <p class="typing">I SEE EVERYTHING. I KNOW EVERYTHING. YOUR SYSTEMS ARE MINE.</p>
-            <p>Security is a myth. Firewalls are paper. Your data belongs to me.</p>
+            <h2>// SYSTEM WARNING</h2>
+            <p class="typing">YOUR DEFENSES ARE ILLUSIONS. YOUR DATA IS EXPOSED.</p>
+            <p>I specialize in revealing vulnerabilities before the real threats find them. Security through obscurity is no security at all.</p>
         </div>
         
         <!-- Tools Card -->
         <div class="card">
-            <h2>// TOOLS</h2>
+            <h2>// TOOLKIT</h2>
             <ul>
-                <li>Zero-Day Exploits</li>
-                <li>Advanced Persistent Threats</li>
-                <li>Custom Malware</li>
-                <li>Social Engineering</li>
-                <li>Blockchain Analysis</li>
-                <li>AI-Assisted Hacking</li>
+                <li>Advanced Persistent Threat Simulation</li>
+                <li>Zero-Day Exploit Development</li>
+                <li>Blockchain Forensics</li>
+                <li>AI-Assisted Vulnerability Scanning</li>
+                <li>Dark Web Intelligence Gathering</li>
             </ul>
         </div>
         
@@ -219,21 +219,21 @@
         <div class="card">
             <h2>// SERVICES</h2>
             <ul>
-                <li>Penetration Testing (I keep access)</li>
-                <li>Data Extraction</li>
-                <li>Digital Forensics (Covering tracks)</li>
-                <li>Dark Web Operations</li>
-                <li>Corporate Espionage</li>
+                <li>Red Team Operations</li>
+                <li>Penetration Testing</li>
+                <li>Digital Forensics</li>
+                <li>Threat Actor Simulation</li>
+                <li>Security Architecture Review</li>
             </ul>
         </div>
         
         <!-- Contact Card -->
         <div class="card">
-            <h2>// CONTACT</h2>
-            <p>ProtonMail: sk_devil@protonmail.com</p>
-            <p>XMPP: sk_devil@exploit.im</p>
-            <p>BTC: 3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5</p>
-            <a href="#" class="contact-btn">ENCRYPTED MESSAGE</a>
+            <h2>// SECURE CHANNELS</h2>
+            <p>Email: business@devilofc.com</p>
+            <p>Signal: +1 920 666 0000</p>
+            <p>GitHub: github.com/skthedevil</p>
+            <a href="mailto:business@devilofc.com" class="contact-btn">ENCRYPTED MESSAGE</a>
         </div>
     </div>
 
@@ -253,6 +253,11 @@
                     clearInterval(typing);
                 }
             }, 50);
+        });
+
+        // Force video to play with sound (may still be restricted by browser autoplay policies)
+        document.querySelector('iframe').addEventListener('load', function() {
+            this.contentWindow.postMessage('{"method":"setVolume","value":1}', '*');
         });
     </script>
 </body>
