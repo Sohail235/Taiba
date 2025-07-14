@@ -3,64 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SK THE DEVIL</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <title>SK THE DEVIL - Hacker Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: monospace;
+      font-family: 'Courier New', monospace;
     }
     .neon {
-      border: 3px solid #ff0000;
-      box-shadow: 0 0 10px #ff0000;
+      border: 4px solid #ff0000;
+      box-shadow: 0 0 12px #ff0000, 0 0 20px #ff0000;
+    }
+    .icon:hover {
+      transform: scale(1.1);
+      transition: 0.2s ease;
+    }
+    .glitch {
+      color: #ff0000;
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #ff0000; }
+      25% { text-shadow: -2px -1px #00ff00; }
+      50% { text-shadow: 3px -1px #ff00ff; }
+      75% { text-shadow: -1px 2px #ffff00; }
+      100% { text-shadow: 2px -2px #00ffff; }
     }
   </style>
 </head>
-<body class="flex flex-col items-center px-4 py-8">
+<body class="bg-black text-white min-h-screen flex flex-col items-center px-6 py-10 space-y-10">
 
-  <!-- Profile Image Upload -->
-  <label for="file-upload" class="cursor-pointer">
-    <img id="profile-pic" src="https://via.placeholder.com/150" alt="Profile" class="rounded-full w-40 h-40 neon my-4 object-cover"/>
-  </label>
-  <input id="file-upload" type="file" accept="image/*" class="hidden" onchange="loadFile(event)" />
+  <!-- Profile Section -->
+  <div class="text-center w-full max-w-xl space-y-6">
+    <img id="profile-pic" src="https://i.imgur.com/WxubHxQ.jpeg"
+         alt="Profile Image" class="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-full object-cover neon" />
 
-  <h1 class="text-2xl text-red-500">I am <span class="text-white">SK THE DEVIL</span></h1>
-  <p class="text-gray-400 my-1">Experience: <span class="text-red-500">born as devil</span></p>
-  <p class="text-gray-400">Date Of Birth: <span class="text-red-500">060606</span></p>
+    <input type="text" id="image-url" placeholder="Paste image URL to change profile"
+           class="w-full p-3 text-sm text-black rounded shadow-lg" oninput="updateImage()" />
 
-  <p class="mt-4">Professions: <span class="text-red-500">Programmer, Hacker</span></p>
-  <p>Location: <span class="text-red-500">ILL CATCH YOU BITCH 💀</span></p>
-  <p>Email: <a href="mailto:jutt420official@gmail.com" class="text-red-500">skthedevil@devil.com</a></p>
-  <p>Phone: <span class="text-red-500">I didn't have a specific call number</span></p>
-
-  <!-- Social Icons -->
-  <div class="flex gap-6 my-4 text-2xl">
-    <a href="#" class="hover:text-red-500">📞</a>
-    <a href="#" class="hover:text-red-500">▶️</a>
-    <a href="#" class="hover:text-red-500">📸</a>
-    <a href="#" class="hover:text-red-500">🎵</a>
+    <h1 class="text-4xl md:text-5xl font-bold glitch">SK THE DEVIL</h1>
+    <p class="text-gray-400 text-xl">🩸 Self-Learned Hacker | DarkNet Explorer | Code Haunter 🩸</p>
   </div>
 
-  <!-- Contact Form -->
-  <div class="w-full max-w-md p-4 bg-gray-900 border border-red-600 rounded-lg">
-    <h2 class="text-center text-xl text-red-500">Contact <span class="text-white">me</span></h2>
-    <form>
-      <input class="w-full p-2 my-2 bg-black border border-red-600 text-white" type="text" placeholder="Your Name" />
-      <input class="w-full p-2 my-2 bg-black border border-red-600 text-white" type="email" placeholder="Email Address..." />
-      <textarea class="w-full p-2 my-2 bg-black border border-red-600 text-white" rows="4" placeholder="Your Message Here."></textarea>
-      <button class="w-full p-2 bg-red-600 hover:bg-red-700 text-white font-bold">Submit</button>
-    </form>
+  <!-- Info Section -->
+  <div class="w-full max-w-2xl text-center space-y-4 text-lg leading-relaxed">
+    <p><span class="text-red-500 font-semibold">Experience:</span> 3 Years in Social Engineering, Exploitation, and Digital Chaos</p>
+    <p><span class="text-red-500 font-semibold">DOB:</span> Devils are made, not born</p>
+    <p><span class="text-red-500 font-semibold">Location:</span> Level -1337, Inferno Shellnet, Sector 666</p>
+    <p><span class="text-red-500 font-semibold">Phone:</span> +1 920 666 0000</p>
+    <p><span class="text-red-500 font-semibold">Email:</span>
+      <a href="mailto:business@devilofc.com" class="text-red-400 hover:underline">business@devilofc.com</a></p>
+    <p><span class="text-red-500 font-semibold">Status:</span> Online [Tor Routed, VPN x3]</p>
+    <p><span class="text-red-500 font-semibold">IP:</span> 66.6.6.6 (Hidden Node)</p>
+    <p><span class="text-red-500 font-semibold">Tools:</span> Termux | Metasploit | Burp Suite | Nmap | Ghost Framework</p>
+    <p><span class="text-red-500 font-semibold">Current Mission:</span> Intercepting insecure signals & launching port flood</p>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="flex justify-center space-x-8 text-4xl mt-4">
+    <a href="#" class="icon text-red-600" title="YouTube">📺</a>
+    <a href="#" class="icon text-pink-500" title="Instagram">📸</a>
+    <a href="#" class="icon text-white" title="TikTok">🎵</a>
+    <a href="#" class="icon text-green-500" title="WhatsApp">📞</a>
+  </div>
+
+  <!-- Terminal Box -->
+  <div class="w-full max-w-2xl bg-gray-900 border border-red-500 rounded p-4 mt-8 text-left text-sm md:text-base">
+    <p class="text-green-400 font-mono">> root@skthedevil:</p>
+    <p class="text-white pl-4">"If you hear silence... it's because I'm already in."</p>
+    <p class="text-red-500 pl-4 mt-2"># Respect the Code — Fear the Devil</p>
+  </div>
+
+  <!-- Floating Fake Terminal -->
+  <div id="terminal" class="fixed bottom-4 right-4 bg-black border border-red-600 text-green-400 font-mono text-xs md:text-sm p-3 rounded w-72 h-48 overflow-hidden shadow-lg z-50">
+    <div id="terminal-output"></div>
   </div>
 
   <!-- Footer -->
-  <footer class="mt-6 text-gray-500 text-sm">
-    ©<span class="text-red-500">SK THE DEVIL</span>, All Rights Reserved.
+  <footer class="mt-12 text-center text-sm text-gray-500">
+    ⚡ Powered by TerminalX | 💀 © 2025 SK THE DEVIL | ☠️ Breach Complete. Ghost Mode Activated.
   </footer>
 
+  <!-- JavaScript -->
   <script>
-    const loadFile = (event) => {
-      const image = document.getElementById('profile-pic');
-      image.src = URL.createObjectURL(event.target.files[0]);
-    };
+    // Update Profile Picture
+    function updateImage() {
+      const imageUrl = document.getElementById('image-url').value;
+      document.getElementById('profile-pic').src = imageUrl;
+    }
+
+    // Fake Terminal Script
+    const terminalLines = [
+      "[+] Scanning device...",
+      "[+] Detected OS: Android 13",
+      "[+] Battery: 87% 🔋",
+      "[+] IP Address: 192.168.0.105",
+      "[+] Injecting backdoor payload...",
+      "[+] Accessing camera... 🔓",
+      "[+] Downloading WhatsApp DB...",
+      "[+] Dumping Contacts...",
+      "[+] Exfiltrating files to darknet...",
+      "[✓] Logs wiped. You were never here."
+    ];
+
+    let i = 0;
+    const output = document.getElementById('terminal-output');
+    function printNextLine() {
+      if (i < terminalLines.length) {
+        const line = document.createElement('div');
+        line.textContent = terminalLines[i++];
+        output.appendChild(line);
+        output.scrollTop = output.scrollHeight;
+        setTimeout(printNextLine, 1200);
+      } else {
+        i = 0;
+        output.innerHTML = '';
+        setTimeout(printNextLine, 2000);
+      }
+    }
+    printNextLine();
   </script>
 </body>
-</html>
+         </html>
